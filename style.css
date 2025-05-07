@@ -1,0 +1,689 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.brand span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0077cc;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* Tombol toggle (default sembunyi) */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* Beranda */
+#beranda {
+  padding-left: 15px;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.teks-content {
+  line-height: 89px;
+  font-family: 'Quicksand', 'Poppins', sans-serif;
+  font-weight: 400;
+  text-shadow: 2px 2px px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+  font-size: 6rem;
+}
+
+.content p {
+  margin-top: 9px;
+  font-size: 1.2rem;
+  line-height: 23px;
+  width: 500px;
+  color: grey;
+}
+
+.kreatif {
+  color: #ef032a;
+}
+
+.desain {
+  color: #338bd8;
+}
+
+.umur {
+  color: #ffec48;
+}
+
+#btn-content {
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.membuat {
+  background-color: #fa0033;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.membuat:hover {
+  background: none;
+  color: #fa0033;
+  font-weight: bold;
+  border: 1px solid #fa0033;
+  transition: 0.2s;
+}
+
+.contoh {
+  background: none;
+  border: 1px solid #338bd8;
+  color: #338bd8;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.contoh:hover {
+  background-color: #338bd8;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive beranda */
+@media (max-width: 768px) {
+  #beranda {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .ft {
+    display: none;
+  }
+
+  .teks-content h1 {
+    text-align: center;
+  }
+
+  .teks-content p {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tombol-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 13px;
+  }
+}
+
+#karya {
+  height: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.judul-halaman{
+  padding-top: 130px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.group-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.judul-karya{
+  margin-top: 10px;
+  color: white;
+}
+
+.box-item{
+  height: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+}
+
+
+.box-item p{
+  width: 280px;
+  color: white;
+  font-weight: bold;
+}
+
+.foto-karya{
+  border: 1px solid white;
+  width: 280px;
+  height: 190px;
+  border-radius: 7px;
+  background-color: white;
+}
+
+#kuning{
+  background-color: #ead800;
+}
+
+#pink{
+  background-color: #ee6ada;
+}
+
+#biru{
+  background-color: #006ff0;
+}
+
+#merah{
+  background-color: #f3003b;
+}
+
+/* Cara Mwmwsan */
+#memesan{
+  height: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.group-memesan{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.foto-memesan{
+  display: flex;
+  justify-content: center;
+}
+
+.foto-memesan img{
+  width: 110px;
+  height: 110px;
+}
+
+.judul-memesan{
+  text-align: center;
+}
+
+.judul-memesan h1{
+  margin-top: 9px;
+}
+
+.judul-memesan p{
+  margin-top: 9px;
+}
+
+.box-item-memesan{
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.box-item-memesan p{
+  width: 250px;
+  font-weight: bold;
+}
+
+#kuning-memesan{
+  background-color: #ead800;
+}
+
+#pink-memesan{
+  background-color: #ee6ada;
+}
+
+#biru-memesan{
+  background-color: #006ff0;
+}
+
+#merah-memesan{
+  background-color: #f3003b;
+}
+
+
+/* Responsive Cara memesan */
+@media (max-width: 768px) {
+  .box-item-memesan{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .foto-memesan{
+    display: flex;
+    justify-content: center;
+  }
+  .box-item-memesan p{
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Template */
+#template{
+  height: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.group-template{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.foto-template{
+  display: flex;
+  justify-content: center;
+}
+
+.foto-template img{
+  width: 150px;
+  height: 150px;
+}
+
+.judul-template{
+  text-align: center;
+}
+
+.judul-template h1{
+  margin-top: 9px;
+}
+
+.judul-template p{
+  margin-top: 9px;
+}
+
+.box-item-template{
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  border-radius: 7px;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+
+.box-item-template p{
+  width: 250px;
+  color: grey;
+}
+
+.btn-template{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.gunakan{
+  
+}
+
+#kuning-template{
+  background-color: white;
+  border: 3px solid #ead800;
+}
+
+#gunakan-kuning{
+  color: white;
+  background-color: #ead800;
+  border: none;
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 16px;
+}
+
+#gunakan-kuning:hover{
+  background-color: #c2b300;
+  transition: 0.2s;
+}
+
+#pink-template{
+  background-color: white;
+  border: 3px solid #ee6ada;
+}
+
+#gunakan-pink{
+  color: white;
+  background-color: #ee6ada;
+  border: none;
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 16px;
+}
+
+#gunakan-pink:hover{
+  background-color: #bb10a0;
+  transition: 0.2s;
+}
+
+#biru-template{
+  background-color: white;
+  border: 3px solid #006ff0;
+}
+
+#gunakan-biru{
+  color: white;
+  background-color: #006ff0;
+  border: none;
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 16px;
+}
+
+#gunakan-biru:hover{
+  background-color: #0059c1;
+  transition: 0.2s;
+}
+
+#merah-template{
+  background-color: white;
+  border: 3px solid  #f3003b;
+}
+
+#gunakan-merah{
+  color: white;
+  background-color: #f3003b;
+  border: none;
+  width: 70%;
+  height: 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 9px;
+  padding-left: 9px;
+  font-size: 16px;
+}
+
+#gunakan-merah:hover{
+  background-color: #c0002f;
+  transition: 0.2s;
+}
+
+
+/* Responsive Cara template */
+@media (max-width: 768px) {
+  .box-item-template{
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .foto-template{
+    display: flex;
+    justify-content: center;
+  }
+  .box-item-template p{
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Popup Styling */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Testimoni */
+
+#testimoni{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 170px;
+}
+
+.box-group-testimoni{
+  display: flex;
+  border: 1px solid black;
+  flex-wrap: wrap;
+  border-radius: 9px;
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 40px;
+  gap: 40px;
+  margin-bottom: 50px;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.item-testimoni{
+  width: 300px;
+  padding: 30px 20px;
+  border-radius: 9px;
+}
+
+.profil-pengirim{
+  display: flex;
+  align-items: center;
+}
+
+.nama-pengirim .nama{
+  margin-left: 9px;
+  font-weight: bold;
+}
+
+.pilihan-paket{
+  margin-left: 9px;
+  color: #f1e6e8;
+}
+
+.item-testimoni img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.testimoni-pengirim{
+  margin-top: 9px;
+}
+
+#box1{
+  background-color: #f3003b;
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+#box2{
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+  background-color: #006ff0;
+  color: white;
+}
+
+#box3{
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.3);
+  background-color: #ee6ada;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .box-group-testimoni{
+    display: flex;
+    justify-content: center;
+    border: none;
+    box-shadow: none;
+  }
+}
